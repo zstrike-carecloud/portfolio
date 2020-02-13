@@ -1,0 +1,22 @@
+.Container {
+    background-color: black;
+    /* opacity: 0; */
+    display: flex;
+    width: 5px;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80px;
+    top: 45%;
+    margin-left: 80px;
+    position: absolute;
+}
+
+.Dots {
+    vertical-align: center;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+

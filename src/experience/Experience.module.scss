@@ -1,0 +1,91 @@
+.Background {
+    height: 100vh;
+    background-color: #003146;
+    overflow: hidden;
+    position: relative;
+}
+
+.Content {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 4fr 4fr;
+}
+
+.LinkContainer {
+    grid-row: 3;
+    grid-column: 1 / span 4;
+    justify-content: space-around;
+}
+
+@media (max-width: 1000px) {
+    .Background {
+        min-height: 1500px;
+    }
+    .LinkContainer {
+        margin-top: 55%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+    }
+    .Link {
+        /* margin-top: 20%; */
+    }
+}
+
+.Link {
+    grid-row: 3;
+    justify-self: center;
+    align-self: center;
+}
+
+.One {
+    @extend .Link;
+    grid-column: 1;
+}
+.Two {
+    @extend .Link;
+    grid-column: 2;
+}
+.Three {
+    @extend .Link;
+    grid-column: 3;
+}
+
+.Title {
+    padding-left: 13%;
+    grid-row: 2;
+    grid-column: 1;
+    /* justify-content: center; */
+    letter-spacing: .15em;
+    color: white;
+    /* margin-left: 5%;
+    position: absolute;
+    margin-top: 250px; */
+}
+
+.FooterWrapper {
+    grid-row: 4;
+    grid-column: 1 / span 4;
+    align-self: end;
+}
+
+.Image {
+    overflow: hidden;
+    border: aqua 2px solid;
+    border-radius: 10px;
+    width: 400px;
+    height: 250px;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: .5s;
+}
+
+.Image:hover {
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: .5s;
+}

@@ -1,0 +1,200 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+}
+
+.Typer {
+    margin: auto;
+    z-index: 2;
+    min-width: 450px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* background-color: lightblue; */
+}
+
+.Arrow {
+    margin: auto;
+    display: block;
+    margin-top: 50px;
+    transform: scale(.8);
+}
+
+.Text {
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color: white;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 2.5s steps(30, end),
+      blink-caret .75s step-end 3 forwards;
+  }
+
+  .SecondBox {
+    /* margin-top: 20px; */
+    height: 20px;
+  }
+
+  .EndText {
+    /* animation-direction: alternate; */
+    /* animation: highlight 3s infinite step-end; */
+    /* margin: 0; */
+    width: 100%;
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color: white;
+  }
+
+  .EndText::after {
+    content: "";
+    border-right: .15em solid transparent;
+    animation: blink-caret2 .75s step-end 3 forwards;
+    animation-name: highlight;
+    animation-duration: 8s;
+    animation-timing-function: steps(1, end);
+    animation-delay: 3.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    /* animation-direction: alternate; */
+    /* animation: highlight 3s infinite step-end; */
+    /* margin: 0; */
+    width: 100%;
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color: white;
+  }
+
+  @keyframes hide {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* @keyframes highlight {
+    from { background-color: rgb(51,222,178, 0.6); }
+    to { background-color: rgb(255, 255, 255, 0.0); }
+  } */
+
+  @keyframes highlight {
+    2% {
+      content: "S";
+    }
+    4% {
+      content: "Si";
+    }
+    6% {
+      content: "Sim";
+    }
+    8% {
+      content: "Simp";
+    }
+    10% {
+      content: "Simpl";
+    }
+    12% {
+      content: "Simple";
+    }
+    20% {
+      content: "Simple";
+      color: #003146;
+      background-color: rgb(51,222,178, 0.6);
+    }
+    25% {
+      content: "";
+      color: white;
+      background-color: rgb(255, 255, 255, 0.0);
+    }
+    40% {
+      content: "S";
+      background-color: rgb(255, 255, 255, 0.0);
+    }
+    42% {
+      content: "Sm";
+      background-color: rgb(255, 255, 255, 0.0);
+    }
+    44% {
+      content: "Sma";
+      background-color: rgb(255, 255, 255, 0.0);
+    }
+    46% {
+      content: "Smar";
+      background-color: rgb(255, 255, 255, 0.0);
+    }
+    48% {
+      content: "Smart";
+      background-color: rgb(255, 255, 255, 0.0);
+    }
+    50% {
+      content: "Smart";
+      background-color: rgb(51,222,178, 0.6);
+      color: #003146;
+    }
+    55% {
+      content: "";
+      background-color: rgb(255, 255, 255, 0.0);
+    }
+    70% {
+      color: white;
+      content: "S";
+    }
+    72% {
+      content: "St";
+    }
+    74% {
+      content: "Str";
+    }
+    76% {
+      content: "Stri";
+    }
+    78% {
+      content: "Strik";
+    }
+    80% {
+      content: "Striki";
+    }
+    82% {
+      content: "Strikin";
+    }
+    84% {
+      content: "Striking";
+    }
+    86% {
+      content: "Striking";
+      color: #003146;
+      background-color: rgb(51,222,178, 0.6);
+    }
+    90% {
+      content: "";
+      color: white;
+      background-color: rgb(255, 255, 255, 0.0);
+    }
+    100% {
+      content: "";
+      background-color: rgb(255, 255, 255, 0.0);
+    }
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(51,222,178); }
+  }
+
+  @keyframes blink-caret2 {
+    from, to { border-color: rgb(51,222,178) }
+    50% { border-color: transparent; }
+  }

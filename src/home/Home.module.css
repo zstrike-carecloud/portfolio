@@ -1,0 +1,18 @@
+.Background {
+    position: relative;
+    display: flex;
+    background-color: black;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: url('BG.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.Name {
+    position: absolute;
+    margin-top: 7%;
+    margin-left: 50%;
+    margin-right: 50%;
+}
