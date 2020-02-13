@@ -24,7 +24,7 @@ const Viewer = () => {
     return (
         <div className={classes.ViewerContainer}>
             <div className={classes.Viewer}>
-                <div className={classes.ViewerBox} style={{ transform: `translate(${currentSlide * -400}px)` }} >
+                <div className={classes.ViewerBox} style={{ transform: `translate(${currentSlide * -450}px)` }} >
                     <div className={classes.Slide}>
                         <p className={classes.Text}>{slides[0]}</p>
                     </div>

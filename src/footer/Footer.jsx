@@ -1,17 +1,19 @@
 import React from 'react';
 import classes from './Footer.module.scss';
-import profile from './profile.jpeg'
+import profile from './Profile_round.svg'
+import linkedIn from './LinkedIn_button.svg';
+import resumeButton from './resume_button.svg';
 
 const Footer = () => {
     return (
         <div className={classes.Footer}>
-            <div className={classes.Resume}>
-                <a href="/Profile.pdf" target="_blank" >PDF</a>
-            </div>
+            <a href="https://www.linkedin.com/in/zachory-strike-1a77a782" target="_blank" className={classes.Resume} >
+                <img src={linkedIn} />
+            </a>
             <img src={profile} className={classes.Profile} />
-            <div className={classes.Resume}>
-                <a href="/Profile.pdf" target="_blank" >PDF</a>
-            </div>
+            <a href="/Profile.pdf" target="_blank" className={classes.Resume}>
+                <img src={resumeButton}  />
+            </a>
         </div>
     );
 }
