@@ -10,15 +10,20 @@ const Viewer = () => {
     const clickLeft = _ => {
         currentSlide > 0 && setSlide(currentSlide - 1);
     }
-    const carecloudSkills = `Lead feature team of 10 (8 engineers, 2 QA) in building front office portion of practice management software (https://www.carecloud.com/go/)
-    Architect Backend Data Models/Orchestration with Microservices
-    -Golang, C#, JS, Graphql, Netflix Orchestrator, FHIR
-    Implement and update UI features throughout configuration and booking views in React within Micro frontend architecture
-    Mentor direct reports across other feature teams`
+    const carecloudEngineer = [`Lead feature team of 10 (8 engineers, 2 QA) in building front office portion of practice management software (https://www.carecloud.com/go/)`,
+    `Architect Backend Data Models/Orchestration with Microservices`,
+    `Golang, C#, JS, Graphql, Netflix Orchestrator, FHIR`,
+    `Implement and update UI features throughout configuration and booking views in React within Micro frontend architecture`,
+    `Mentor direct reports across other feature teams`];
+    const carecloudAutomation = [`Lead team of 11 engineers`,
+    `Architected Automation Dashboard: Front/Backend in React/Graphql/Node.js`,
+    `Implemented and oversaw multiple automation frameworks (UI/API testing)`,
+    `Created RPA Dashboard in React with Graphql Backend Server`,
+    `Hired/Mentored team of junior developers`];
     const JCI = `Slide 2`
     const Centare = `Slide 3`
     const slides = [
-        carecloudSkills, JCI, Centare
+        carecloudEngineer, carecloudAutomation, JCI, Centare
     ];
 
     return (
@@ -26,10 +31,27 @@ const Viewer = () => {
             <div className={classes.Viewer}>
                 <div className={classes.ViewerBox} style={{ transform: `translate(${currentSlide * -450}px)` }} >
                     <div className={classes.Slide}>
-                        <p className={classes.Text}>{slides[0]}</p>
+                        <h2 className={classes.Header}>CareCloud</h2>
+                        <h2 className={classes.Header}>Lead Software Engineer II</h2>
+                        <ul className={classes.Text}>
+                            <li>{slides[0][0]}</li>
+                            <li>{slides[0][1]}</li>
+                            <li>{slides[0][2]}</li>
+                            <li>{slides[0][3]}</li>
+                            <li>{slides[0][4]}</li>
+                        </ul>
+                        {/* <p className={classes.Text}>{slides[0]}</p> */}
                     </div>
                     <div className={classes.Slide}>
-                        <p className={classes.Text}>{slides[1]}</p>
+                    <h2 className={classes.Header}>CareCloud Cont.</h2>
+                        <h2 className={classes.Header}>Lead Software Engineer in Test </h2>
+                        <ul className={classes.Text}>
+                            <li>{slides[1][0]}</li>
+                            <li>{slides[1][1]}</li>
+                            <li>{slides[1][2]}</li>
+                            <li>{slides[1][3]}</li>
+                            <li>{slides[1][4]}</li>
+                        </ul>
                     </div>
                     <div className={classes.Slide}>
                         <p className={classes.Text}>{slides[2]}</p>

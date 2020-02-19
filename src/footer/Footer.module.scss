@@ -1,11 +1,26 @@
 .Footer {
-    height: 200px;
+    height: 300px;
     min-height: 200px;
-    background-color: rgba(169, 169, 169, 0.42);
+    background-color: #001C28;
     margin-top: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+@media (max-width: 1200px) {
+    .Footer {
+        width: 100vw;
+        height: 600px;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.CenterContainer {
+    display: flex;
+    flex-direction: column;
 }
 
 .Profile {
@@ -16,7 +31,25 @@
 
 .Resume {
     align-self: center;
-    // height: 20px;
-    // width: 50px;
     margin: auto;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: .5s;
+}
+
+.Resume:hover {
+    transform: scale(1.05);
+    transition-property: transform;
+    transition-duration: .5s;
+}
+
+.Name {
+    transform: scale(.8);
+}
+
+.EmailNumber {
+    margin: auto;
+    font-family: proxima-nova, sans-serif;
+    color: rgb(51,222,178);
+    letter-spacing: .05em;
 }
