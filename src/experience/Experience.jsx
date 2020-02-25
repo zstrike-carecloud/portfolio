@@ -13,7 +13,7 @@ const Experience = () => {
             <div className={classes.Content} >
                 <h1 className={classes.Title}>Links</h1>
                 <a href="https://www.carecloud.com/go" target="_blank" className={classes.One}>
-                    <img src={Go} className={classes.Image} />
+                    <img style={{ objectFit: 'contain' }} src={Go} className={classes.Image} />
                 </a>
                 <a href="https://glas.johnsoncontrols.com" target="_blank" className={classes.Two}>
                     <img src={Glas} className={classes.Image} />

@@ -20,7 +20,9 @@ const Viewer = () => {
     `Implemented and oversaw multiple automation frameworks (UI/API testing)`,
     `Created RPA Dashboard in React with Graphql Backend Server`,
     `Hired/Mentored team of junior developers`];
-    const JCI = `Slide 2`
+    const JCI = [`Lead testing team for GLAS Thermostat project`,
+    `Device/Web/Mobile testing`,
+    `SQA Automation`]
     const Centare = `Slide 3`
     const slides = [
         carecloudEngineer, carecloudAutomation, JCI, Centare
@@ -34,27 +36,22 @@ const Viewer = () => {
                         <h2 className={classes.Header}>CareCloud</h2>
                         <h2 className={classes.Header}>Lead Software Engineer II</h2>
                         <ul className={classes.Text}>
-                            <li>{slides[0][0]}</li>
-                            <li>{slides[0][1]}</li>
-                            <li>{slides[0][2]}</li>
-                            <li>{slides[0][3]}</li>
-                            <li>{slides[0][4]}</li>
+                            {slides[0].map(bullet => <li>{bullet}</li>)}
                         </ul>
-                        {/* <p className={classes.Text}>{slides[0]}</p> */}
                     </div>
                     <div className={classes.Slide}>
-                    <h2 className={classes.Header}>CareCloud Cont.</h2>
-                        <h2 className={classes.Header}>Lead Software Engineer in Test </h2>
+                        <h2 className={classes.Header}>CareCloud Cont.</h2>
+                        <h2 className={classes.Header}>Lead Software Engineer in Test</h2>
                         <ul className={classes.Text}>
-                            <li>{slides[1][0]}</li>
-                            <li>{slides[1][1]}</li>
-                            <li>{slides[1][2]}</li>
-                            <li>{slides[1][3]}</li>
-                            <li>{slides[1][4]}</li>
+                            {slides[1].map(bullet => <li>{bullet}</li>)}
                         </ul>
                     </div>
                     <div className={classes.Slide}>
-                        <p className={classes.Text}>{slides[2]}</p>
+                        <h2 className={classes.Header}>SafeNet Consulting</h2>
+                        <h2 className={classes.Header}>IT Consultant</h2>
+                        <ul className={classes.Text}>
+                            {slides[2].map(bullet => <li>{bullet}</li>)}
+                        </ul>
                     </div>
                 </div>
             </div>

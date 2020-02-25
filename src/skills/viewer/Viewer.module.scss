@@ -6,6 +6,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    transition-property: transform;
+    transition-duration: .5s;
 }
 
 .Viewer {
@@ -50,7 +52,6 @@
     padding-left: 50px;
     padding-right: 15px;
     list-style-type: circle;
-    // margin: 5px;
 }
 
 .Item {
