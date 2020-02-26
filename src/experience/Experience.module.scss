@@ -37,12 +37,56 @@
     grid-row: 3;
     justify-self: center;
     align-self: center;
+    position: relative;
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+    z-index: 1;
+    border-radius: 10px;
+  }
 
 .One {
     @extend .Link;
     grid-column: 1;
 }
+
+.One:hover {
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+.One:hover .overlay {
+    // opacity: .5;
+    // transform: scale(1.1);
+    // transition-property: transform;
+    // transition-duration: 1s;
+    animation: here 1s forwards;
+}
+
+@keyframes here {
+    from { 
+        background-color: transparent;
+        opacity: 0;
+    }
+    to { 
+        background-color: black;
+        opacity: .6;
+    }
+}
+
+
+
 .Two {
     @extend .Link;
     grid-column: 2;
@@ -69,6 +113,7 @@
 }
 
 .Image {
+    display: block;
     object-fit: cover;
     overflow: hidden;
     border: aqua 2px solid;
@@ -80,8 +125,15 @@
     transition-duration: .5s;
 }
 
+
+
+// .Image:hover .overlay {
+//     display: block;
+// }
+
 .Image:hover {
     transform: scale(1.1);
     transition-property: transform;
     transition-duration: .5s;
+    opacity: .3;
 }

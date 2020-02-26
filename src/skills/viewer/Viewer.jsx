@@ -10,7 +10,7 @@ const Viewer = () => {
     const clickLeft = _ => {
         currentSlide > 0 && setSlide(currentSlide - 1);
     }
-    const carecloudEngineer = [`Lead feature team of 10 (8 engineers, 2 QA) in building front office portion of practice management software (https://www.carecloud.com/go/)`,
+    const carecloudEngineer = [`Lead feature team of 10 (8 engineers, 2 QA) in building front office portion of practice management software`,
     `Architect Backend Data Models/Orchestration with Microservices`,
     `Golang, C#, JS, Graphql, Netflix Orchestrator, FHIR`,
     `Implement and update UI features throughout configuration and booking views in React within Micro frontend architecture`,
@@ -55,10 +55,14 @@ const Viewer = () => {
                     </div>
                 </div>
             </div>
-            <img src={Arrow} onClick={clickLeft} className={classes.LeftArrow} />
-            <img src={Arrow} onClick={clickRight} className={classes.RightArrow} />
-            {/* <i className={"icono-arrow1-right"} onClick={clickLeft} />
-            <i className={"icono-arrow1-left"} onClick={clickRight} /> */}
+            <div className={classes.ViewerNavigation}>
+                <img src={Arrow} onClick={clickLeft} className={classes.LeftArrow} />
+                <div className={classes.Indicators}>
+                    {slides.map((_, idx) => <div onClick={_ => setSlide(idx)} style={{ opacity: idx === currentSlide ? 1 : .4}} />)}
+                </div>
+                <img src={Arrow} onClick={clickRight} className={classes.RightArrow} />
+            </div>
+
         </div>
     );
 }

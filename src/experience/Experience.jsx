@@ -12,9 +12,13 @@ const Experience = () => {
             <Waves side={'top'} />
             <div className={classes.Content} >
                 <h1 className={classes.Title}>Links</h1>
-                <a href="https://www.carecloud.com/go" target="_blank" className={classes.One}>
-                    <img style={{ objectFit: 'contain' }} src={Go} className={classes.Image} />
-                </a>
+                <div className={classes.One}>
+                    <div className={classes.overlay}>SOME TEXT</div>
+                    <a href="https://www.carecloud.com/go" target="_blank" >
+                        <img style={{ objectFit: 'contain' }} src={Go} className={classes.Image} />
+                    </a>
+                </div>
+
                 <a href="https://glas.johnsoncontrols.com" target="_blank" className={classes.Two}>
                     <img src={Glas} className={classes.Image} />
                 </a>

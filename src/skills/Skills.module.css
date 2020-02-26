@@ -27,6 +27,18 @@
     padding: 5px;
 }
 
+.SkillsBox:hover {
+    /* transform: translate(30px);
+    transition-property: transform; */
+    /* transition-duration: .5s; */
+    animation: example .5;
+}
+
+@keyframes example {
+    from {transform: translate(0);}
+    to {transform: translate(30px);}
+  }
+
 .SkillsContainer {
     height: 350px;
     width: 500px;

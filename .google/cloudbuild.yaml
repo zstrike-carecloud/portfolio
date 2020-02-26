@@ -1,0 +1,14 @@
+steps:
+    # Build the container image.
+    - name: 'gcr.io/cloud-builders/docker'
+      args:
+        - 'build'
+        - '.'
+        - '-t'
+        - 'gcr.io/${PROJECT_ID}/testd:${COMMIT_SHA}'
+        - '-f'
+        - '.google/Dockerfile'
+        - '--build-arg'
+        - 'fbtoken=${_FBTOKEN}'
+        - '--build-arg'
+        - 'build=$BUILD_ID'

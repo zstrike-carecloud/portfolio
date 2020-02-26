@@ -15,7 +15,7 @@ const Skills = () => {
                     <Fade left cascade>
                         <div className={classes.SkillsContainer}>
                             <div><h1 style={{ color: 'white', letterSpacing: '.15em', fontWeight: 'bolder', fontSize: '40px', fontStyle: 'normal' }}>Skills</h1></div>
-                            <div className={classes.SkillsBox}>JS</div>
+                            <div style={{ animation: 0 }} className={classes.SkillsBox}>JS</div>
                             <div className={classes.SkillsBox}>React</div>
                             <div className={classes.SkillsBox}>NodeJS</div>
                             <div className={classes.SkillsBox}>GraphQL</div>

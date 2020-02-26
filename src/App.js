@@ -6,6 +6,7 @@ import { Skills } from './skills';
 import { Experience } from './experience';
 
 function App() {
+  window.__PORTFOLIO__ = { buildId: process.env.REACT_APP_BUILD_ID }
   return (
     <div className="App">
       <header className="App-header">
