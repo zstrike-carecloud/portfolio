@@ -24,7 +24,6 @@
         min-height: 1500px;
     }
     .Content {
-        // margin-top: 35%;
         margin-left: auto;
         margin-right: auto;
         justify-content: space-around;
@@ -34,10 +33,24 @@
 }
 
 .Link {
+    cursor: pointer;
     grid-row: 3;
     justify-self: center;
     align-self: center;
     position: relative;
+    transform: scale(1.0);
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+.Link:hover {
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+.Link:hover .overlay {
+    animation: here 1s forwards;
 }
 
 .overlay {
@@ -53,6 +66,7 @@
     background-color: black;
     z-index: 1;
     border-radius: 10px;
+    color: white;
   }
 
 .One {
@@ -60,18 +74,14 @@
     grid-column: 1;
 }
 
-.One:hover {
-    transform: scale(1.1);
-    transition-property: transform;
-    transition-duration: 1s;
+.Two {
+    @extend .Link;
+    grid-column: 2;
 }
 
-.One:hover .overlay {
-    // opacity: .5;
-    // transform: scale(1.1);
-    // transition-property: transform;
-    // transition-duration: 1s;
-    animation: here 1s forwards;
+.Three {
+    @extend .Link;
+    grid-column: 3;
 }
 
 @keyframes here {
@@ -81,19 +91,8 @@
     }
     to { 
         background-color: black;
-        opacity: .6;
+        opacity: .7;
     }
-}
-
-
-
-.Two {
-    @extend .Link;
-    grid-column: 2;
-}
-.Three {
-    @extend .Link;
-    grid-column: 3;
 }
 
 .Title {

@@ -4,12 +4,7 @@ import Arrow from '../../home/Arrow.svg';
 
 const Viewer = () => {
     const [currentSlide, setSlide] = useState(0);
-    const clickRight = _ => {
-        currentSlide < 2 && setSlide(currentSlide + 1);
-    }
-    const clickLeft = _ => {
-        currentSlide > 0 && setSlide(currentSlide - 1);
-    }
+
     const carecloudEngineer = [`Lead feature team of 10 (8 engineers, 2 QA) in building front office portion of practice management software`,
     `Architect Backend Data Models/Orchestration with Microservices`,
     `Golang, C#, JS, Graphql, Netflix Orchestrator, FHIR`,
@@ -22,11 +17,27 @@ const Viewer = () => {
     `Hired/Mentored team of junior developers`];
     const JCI = [`Lead testing team for GLAS Thermostat project`,
     `Device/Web/Mobile testing`,
-    `SQA Automation`]
-    const Centare = `Slide 3`
+    `SQA Automation`];
+    const Advicent = [`Implemented WCF services in C#`, `Wrote Specflow tests to verify database responses`, `Integration tests written in specflow to validate services`];
     const slides = [
-        carecloudEngineer, carecloudAutomation, JCI, Centare
+        carecloudEngineer, carecloudAutomation, JCI, Advicent
     ];
+
+    const clickRight = _ => {
+        if (currentSlide < 3) {
+            setSlide(currentSlide + 1)
+        } else {
+            setSlide(0)
+        }
+    }
+    const clickLeft = _ => {
+        if (currentSlide > 0) {
+            setSlide(currentSlide - 1)
+        } else {
+            setSlide(slides.length - 1)
+        }
+    }
+
 
     return (
         <div className={classes.ViewerContainer}>
@@ -51,6 +62,13 @@ const Viewer = () => {
                         <h2 className={classes.Header}>IT Consultant</h2>
                         <ul className={classes.Text}>
                             {slides[2].map(bullet => <li>{bullet}</li>)}
+                        </ul>
+                    </div>
+                    <div className={classes.Slide}>
+                        <h2 className={classes.Header}>Advicent</h2>
+                        <h2 className={classes.Header}>QA Engineer</h2>
+                        <ul className={classes.Text}>
+                            {slides[3].map(bullet => <li>{bullet}</li>)}
                         </ul>
                     </div>
                 </div>
