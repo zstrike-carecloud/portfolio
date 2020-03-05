@@ -64,7 +64,7 @@ const Viewer = () => {
                                         {profile.bullets.map(bullet => <li>{bullet}</li>)}
                                     </ul>
                                 </div>
-                            )
+                            );
                         })
                     }
                 </div>

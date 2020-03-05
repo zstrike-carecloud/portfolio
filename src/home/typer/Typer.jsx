@@ -19,9 +19,9 @@ const Typer = () => {
                     </h1>
                 </div>
             </div>
-            <a href="#skills" className={classes.Arrow}>
+            {/* <a href="#skills" className={classes.Arrow}>
                 <img src={Arrow}  />
-            </a>
+            </a> */}
         </div>
     );
 }

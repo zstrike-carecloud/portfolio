@@ -1,0 +1,12 @@
+.DownArrow {
+    cursor: pointer;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: .5s;
+}
+
+.DownArrow:hover {
+    transform: scale(1.3);
+    transition-property: transform;
+    transition-duration: .5s;
+}

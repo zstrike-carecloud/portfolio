@@ -1,6 +1,8 @@
 .Background {
     position: relative;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: black;
     height: 100vh;
     min-height: 100vh;
@@ -15,4 +17,8 @@
     margin-top: 7%;
     margin-left: 50%;
     margin-right: 50%;
+}
+
+.DownArrow {
+    margin: 75px auto 0px auto;
 }

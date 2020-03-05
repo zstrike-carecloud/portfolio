@@ -7,6 +7,18 @@ import { Experience } from './experience';
 
 function App() {
   window.__PORTFOLIO__ = { buildId: process.env.REACT_APP_BUILD_ID }
+
+  const refs = {};
+
+  const handleDownArrowClick = page => {
+    refs[page].scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+
+  const setRef = ({ ref, page }) => (refs[page] = ref);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -23,8 +35,8 @@ function App() {
           Learn React
         </a> */}
       </header>
-      <Home />
-      <Skills />
+      <Home handleDownArrowClick={handleDownArrowClick} />
+      <Skills setRef={setRef} />
       <Experience />
     </div>
   );

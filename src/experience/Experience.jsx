@@ -9,7 +9,7 @@ import Naviplan from './Naviplan.jpeg';
 const Experience = () => {
     const goTasks = {
         name: 'CareCloud Go',
-        description: 'Architected the front-office portion of the app while leading a team of 11',
+        description: 'Architected the front-office portion of the app while leading a team of 10',
         link: 'https://www.carecloud.com/go',
         image: Go,
     };
