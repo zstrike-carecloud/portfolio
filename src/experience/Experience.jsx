@@ -9,19 +9,19 @@ import Naviplan from './Naviplan.jpeg';
 const Experience = () => {
     const goTasks = {
         name: 'CareCloud Go',
-        description: 'Architected the front-office portion of the app while leading a team of 10',
+        description: 'Architected the front-office features (i.e. scheduling and patient demographics) of the app while leading a team of 10',
         link: 'https://www.carecloud.com/go',
         image: Go,
     };
     const glasTasks = {
         name: 'JCI GLAS',
-        description: `Lead testing/automation team across device, web, and mobile platforms`,
+        description: `Lead testing and automation team across device, web, and mobile platforms for high end smart thermostat`,
         link: 'https://glas.johnsoncontrols.com',
         image: Glas,
     };
     const advicentTasks = {
         name: 'JCI GLAS',
-        description: 'Wrote service implementations and integration tests',
+        description: 'Worked with integrations team to set up third party integrations. Wrote service implementations and automated tests for those services',
         link: 'https://www.advicentsolutions.com/products/naviplan',
         image: Naviplan,
     };
@@ -40,7 +40,7 @@ const Experience = () => {
                             <div className={classes.Link} style={{ gridColumn: idx + 1 }}>
                                 <div className={classes.overlay}>
                                     <div style={{ padding: '30px', fontSize: 20 }}>
-                                        <h3>{project.name}</h3>
+                                        <h3 style={{ textAlign: 'center', color: 'aqua' }}>{project.name}</h3>
                                         <p>{project.description}</p>
                                     </div>
                                 </div>
