@@ -35,7 +35,7 @@ const Viewer = () => {
 
     const Advicent = {
         company: 'Advicent',
-        position: 'QA Engineer',
+        position: 'Automation Engineer',
         bullets: [`Implemented WCF services in C#`, `Wrote Specflow tests to verify database responses`, `Integration tests written in specflow to validate services`],
     };
 

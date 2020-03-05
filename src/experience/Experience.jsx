@@ -7,48 +7,50 @@ import Glas from './Johnson-Controls-GLAS-Microsoft.jpg';
 import Naviplan from './Naviplan.jpeg';
 
 const Experience = () => {
-    const goTasks = `Architected the front-office portion of the app while leading a team of 11`;
-    const glasTasks = `Lead testing/automation team across device, web, and mobile platforms`;
-    const advicentTasks = `Wrote service implementations and integration tests`;
+    const goTasks = {
+        name: 'CareCloud Go',
+        description: 'Architected the front-office portion of the app while leading a team of 11',
+        link: 'https://www.carecloud.com/go',
+        image: Go,
+    };
+    const glasTasks = {
+        name: 'JCI GLAS',
+        description: `Lead testing/automation team across device, web, and mobile platforms`,
+        link: 'https://glas.johnsoncontrols.com',
+        image: Glas,
+    };
+    const advicentTasks = {
+        name: 'JCI GLAS',
+        description: 'Wrote service implementations and integration tests',
+        link: 'https://www.advicentsolutions.com/products/naviplan',
+        image: Naviplan,
+    };
+    const projects = [
+        goTasks, glasTasks, advicentTasks,
+    ];
 
     return (
         <div id='experience' className={classes.Background}>
             <Waves side={'top'} />
             <div className={classes.Content} >
                 <h1 className={classes.Title}>Links</h1>
-                <div className={classes.One}>
-                    <div className={classes.overlay}>
-                        <div style={{ padding: '30px', fontSize: 20 }}>
-                            <h3>CareCloud Go</h3>
-                            <p>{goTasks}</p>
-                        </div>
-                    </div>
-                    <a href="https://www.carecloud.com/go" target="_blank">
-                        <img style={{ objectFit: 'contain' }} src={Go} className={classes.Image} />
-                    </a>
-                </div>
-                <div className={classes.Two}>
-                    <div className={classes.overlay}>
-                        <div style={{ padding: '30px', fontSize: 20 }}>
-                            <h3>JCI GLAS</h3>
-                            <p>{glasTasks}</p>
-                        </div>
-                    </div>
-                    <a href="https://glas.johnsoncontrols.com" target="_blank">
-                        <img src={Glas} className={classes.Image} />
-                    </a>
-                </div>
-                <div className={classes.Three}>
-                    <div className={classes.overlay}>
-                        <div style={{ padding: '30px', fontSize: 20 }}>
-                            <h3>Advicent</h3>
-                            <p>{advicentTasks}</p>
-                        </div>
-                    </div>
-                    <a href="https://www.advicentsolutions.com/products/naviplan" target="_blank">
-                        <img src={Naviplan} className={classes.Image} alt="logo" />
-                    </a>
-                </div>
+                {
+                    projects.map((project, idx) => {
+                        return (
+                            <div className={classes.Link} style={{ gridColumn: idx + 1 }}>
+                                <div className={classes.overlay}>
+                                    <div style={{ padding: '30px', fontSize: 20 }}>
+                                        <h3>{project.name}</h3>
+                                        <p>{project.description}</p>
+                                    </div>
+                                </div>
+                                <a href={project.link} target="_blank">
+                                    <img style={{ objectFit: idx === 0 ? 'contain' : 'cover' }} src={project.image} className={classes.Image} />
+                                </a>
+                            </div>
+                        );
+                    })
+                }
                 <div className={classes.FooterWrapper}>
                     <Footer />
                 </div>
