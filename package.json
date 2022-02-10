@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "animate.js": "^2.0.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "particlesjs": "^2.2.3",
     "pure-react-carousel": "^1.25.1",
     "react": "^16.12.0",
